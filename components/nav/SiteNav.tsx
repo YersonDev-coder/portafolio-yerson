@@ -1,0 +1,44 @@
+import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
+import { site } from "@/content/site";
+
+const links = [
+  { href: "/#sobre-mi", label: "Sobre mí" },
+  { href: "/#stack", label: "Stack" },
+  { href: "/#proyectos", label: "Proyectos" },
+  { href: "/#contacto", label: "Contacto" },
+];
+
+export function SiteNav() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-surface-border/60 bg-background/80 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
+        <Link href="/" className="font-mono text-sm font-semibold text-foreground">
+          yrv<span className="text-accent">.</span>dev
+        </Link>
+        <nav className="hidden gap-6 sm:flex">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <div className="flex items-center gap-3">
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-sm text-muted transition-colors hover:text-foreground sm:inline"
+          >
+            GitHub
+          </a>
+          <ThemeToggle />
+        </div>
+      </div>
+    </header>
+  );
+}
