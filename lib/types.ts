@@ -21,13 +21,6 @@ export interface Project {
   imageKind?: "screenshot" | "logo";
 }
 
-export interface OtherRepo {
-  name: string;
-  description: string;
-  type: string;
-  repoUrl: string;
-}
-
 export interface SkillGroup {
   label: string;
   items: string[];

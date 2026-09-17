@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 export function ProjectCard({ project, wide = false }: { project: Project; wide?: boolean }) {
   return (
     <div
-      className={`group flex flex-col overflow-hidden rounded-xl border border-surface-border bg-surface/50 transition-colors hover:border-accent/40 ${
+      className={`group flex flex-col overflow-hidden rounded-xl border border-surface-border bg-surface/50 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_12px_30px_-12px_rgba(0,0,0,0.4)] ${
         wide ? "sm:col-span-2" : ""
       }`}
     >
@@ -66,9 +66,12 @@ export function ProjectCard({ project, wide = false }: { project: Project; wide?
           )}
           <Link
             href={`/proyectos/${project.slug}`}
-            className="ml-auto text-muted transition-colors hover:text-foreground"
+            className="group/link ml-auto inline-flex items-center gap-1 text-muted transition-colors hover:text-foreground"
           >
-            Ver detalle →
+            Ver detalle
+            <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-1">
+              →
+            </span>
           </Link>
         </div>
       </div>

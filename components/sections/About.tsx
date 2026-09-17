@@ -21,7 +21,7 @@ export function About() {
           {facts.map((fact) => (
             <div
               key={fact.label}
-              className="rounded-lg border border-surface-border bg-surface/50 p-4"
+              className="rounded-lg border border-surface-border bg-surface/50 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-surface"
             >
               <p className="font-mono text-xs text-accent">{fact.label}</p>
               <p className="mt-1 text-foreground">{fact.value}</p>

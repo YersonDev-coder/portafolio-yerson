@@ -62,19 +62,23 @@ export function ProjectImage({
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/60" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-400/60" />
       </div>
-      <div className="relative aspect-[16/10] w-full">
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
         {image ? (
           <Image
             src={image.src}
             alt={image.alt}
             fill
             priority={priority}
-            className={fit === "cover" ? "object-cover" : "object-contain p-8"}
+            className={`transition-transform duration-500 ease-out group-hover:scale-[1.06] ${
+              fit === "cover" ? "object-cover" : "object-contain p-8"
+            }`}
             sizes="(min-width: 1024px) 600px, 100vw"
           />
         ) : (
           <>
-            <PlaceholderMockup />
+            <div className="transition-transform duration-500 ease-out group-hover:scale-[1.04]">
+              <PlaceholderMockup />
+            </div>
             <span className="absolute right-3 top-3 rounded-full border border-accent/30 bg-background/80 px-3 py-1 font-mono text-xs text-accent backdrop-blur">
               Captura próximamente
             </span>
