@@ -52,6 +52,10 @@ const personJsonLd = {
   email: site.email,
   url: site.url,
   sameAs: [site.github],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: site.university,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

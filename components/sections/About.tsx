@@ -3,7 +3,7 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { site } from "@/content/site";
 
 const facts = [
-  { label: "Ubicación", value: site.location },
+  { label: "Universidad", value: `${site.university} (${site.location})` },
   { label: "Proyectos en producción", value: "2 sitios en vivo" },
   { label: "Enfoque", value: "Full-stack: DB, backend y frontend" },
 ];
@@ -13,7 +13,7 @@ export function About() {
     <Section id="sobre-mi" kicker="Sobre mí" title="Quién soy">
       <RevealOnScroll>
         <p className="max-w-2xl text-lg text-foreground/90">
-          Estudiante de Ciencias de la Computación construyendo sistemas reales para
+          Estudiante de Ingeniería de Sistemas construyendo sistemas reales para
           negocios y organizaciones: desde el modelo de datos hasta la interfaz que
           usa la gente todos los días.
         </p>
