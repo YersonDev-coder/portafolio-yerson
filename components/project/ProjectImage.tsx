@@ -47,11 +47,13 @@ export function ProjectImage({
   className = "",
   priority = false,
   fit = "cover",
+  sizes = "(min-width: 1024px) 600px, 100vw",
 }: {
   image: ProjectImageType | null;
   className?: string;
   priority?: boolean;
   fit?: "cover" | "contain";
+  sizes?: string;
 }) {
   return (
     <div
@@ -72,7 +74,7 @@ export function ProjectImage({
             className={`transition-transform duration-500 ease-out group-hover:scale-[1.06] ${
               fit === "cover" ? "object-cover" : "object-contain p-8"
             }`}
-            sizes="(min-width: 1024px) 600px, 100vw"
+            sizes={sizes}
           />
         ) : (
           <>
