@@ -24,6 +24,11 @@ export function Contact() {
           <Button href={site.github} variant="secondary" external>
             GitHub
           </Button>
+          {site.linkedin && (
+            <Button href={site.linkedin} variant="secondary" external>
+              LinkedIn
+            </Button>
+          )}
         </div>
         <div className="mt-6 flex flex-col gap-1 text-sm text-muted">
           <span>{site.email}</span>

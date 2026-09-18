@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { site } from "@/content/site";
+import { education } from "@/content/profile";
 
 const links = [
   { href: "/#sobre-mi", label: "Sobre mí" },
   { href: "/#stack", label: "Stack" },
   { href: "/#proyectos", label: "Proyectos" },
+  ...(education.length ? [{ href: "/#formacion", label: "Formación" }] : []),
   { href: "/#contacto", label: "Contacto" },
 ];
 

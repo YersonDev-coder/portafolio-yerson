@@ -1,10 +1,13 @@
 import { Section } from "@/components/ui/Section";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { site } from "@/content/site";
+import { projects } from "@/content/projects";
+
+const liveCount = projects.filter((p) => p.status === "live").length;
 
 const facts = [
   { label: "Universidad", value: `${site.university} (${site.location})` },
-  { label: "Proyectos en producción", value: "2 sitios en vivo" },
+  { label: "Proyectos en producción", value: `${liveCount} sitios en vivo` },
   { label: "Enfoque", value: "Full-stack: DB, backend y frontend" },
 ];
 

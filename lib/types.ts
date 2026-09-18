@@ -37,3 +37,11 @@ export interface SkillGroup {
   label: string;
   items: string[];
 }
+
+export interface TimelineItem {
+  title: string;
+  subtitle: string;
+  description?: string;
+  date?: string;
+  certificateUrl?: string;
+}

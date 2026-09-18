@@ -9,6 +9,10 @@ export const site = {
   whatsappDisplay: "+51 954 477 750",
   github: "https://github.com/YersonDev-coder",
   url: "https://portafolio-yerson.vercel.app",
+  // Opcionales: si se completan, aparecen solos en Hero/Contacto.
+  linkedin: "" as string,
+  cv: "" as string, // p. ej. "/cv.pdf" (poner el archivo en public/)
+  avatar: "" as string, // p. ej. "/avatar.jpg"
   tagline: "Construyo sistemas full-stack — de la base de datos a la interfaz.",
   description:
     "Estudiante de Ingeniería de Sistemas en la Universidad Nacional Hermilio Valdizán (Huánuco, Perú), construyendo sistemas full-stack en producción: tiendas online, SaaS, plataformas de gestión documental y sistemas de gestión por procesos con IA integrada.",
